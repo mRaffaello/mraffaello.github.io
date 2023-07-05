@@ -1,0 +1,80 @@
+{
+    "root": "src",
+    "organizeOnSave": true,
+    "blocks": [
+        {
+            "name": "React",
+            "libraries": ["react", "react-dom"]
+        },
+        {
+            "name": "Hooks",
+            "folders": ["hooks"]
+        },
+        {
+            "name": "Store",
+            "folders": ["store"],
+            "libraries": [
+                "react-redux",
+                "@reduxjs/toolkit",
+                "redux",
+                "redux-persist",
+                "redux-persist/integration/react"
+            ]
+        },
+        {
+            "name": "Api",
+            "libraries": ["react-query"],
+            "folders": ["api"]
+        },
+        {
+            "name": "Views",
+            "folders": ["views"]
+        },
+        {
+            "name": "Pages",
+            "folders": ["pages"]
+        },
+        {
+            "name": "Components",
+            "folders": ["components"]
+        },
+        {
+            "name": "Navigation",
+            "libraries": ["react-router-dom"]
+        },
+        {
+            "name": "Services",
+            "folders": ["services"]
+        },
+        {
+            "name": "Config",
+            "folders": ["config"]
+        },
+        {
+            "name": "Utils",
+            "folders": ["utils"]
+        },
+        {
+            "name": "Locale",
+            "folders": ["locale"]
+        },
+        {
+            "name": "Assets",
+            "folders": ["assets"],
+            "libraries": [
+                "react-native-heroicons",
+                "react-native-svg",
+                "@heroicons/react/solid",
+                "@heroicons/react/outline"
+            ]
+        },
+        {
+            "name": "Themes",
+            "folders": ["theme"]
+        },
+        {
+            "name": "Types",
+            "folders": ["types"]
+        }
+    ]
+}

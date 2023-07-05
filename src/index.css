@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .overlapped-text-black {
+        text-shadow: -4px -4px 0 #0f172a, 0 -4px 0 #0f172a, 4px -4px 0 #0f172a, 4px 0 0 #0f172a,
+            4px 4px 0 #0f172a, 0 4px 0 #0f172a, -4px 4px 0 #0f172a, -4px 0 0 #0f172a;
+    }
+
+    .overlapped-text-white {
+        text-shadow: -4px -4px 0 white, 0 -4px 0 white, 4px -4px 0 white, 4px 0 0 white,
+            4px 4px 0 white, 0 4px 0 white, -4px 4px 0 white, -4px 0 0 white;
+    }
+
+    .stripes-light {
+        background: repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 10px,
+            #eff1f3 10px,
+            #eff1f3 20px
+        );
+    }
+
+    .stripes-dark {
+        background: repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 10px,
+            #1f2937 10px,
+            #1f2937 20px
+        );
+    }
+
+    #app-overlay {
+        clip-path: circle(var(--size, 150px) at var(--x, 50%) var(--y, 15%));
+        transition: clip-path 50ms;
+        backface-visibility: hidden;
+    }
+
+    @media (min-width: 768px) {
+        #app-overlay {
+            --x: 58%;
+            --y: 40%;
+        }
+    }
+
+    .circle {
+        height: 24px;
+        width: 24px;
+        border-radius: 24px;
+        background-color: black;
+        position: fixed;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        z-index: 99999999;
+    }
+}
