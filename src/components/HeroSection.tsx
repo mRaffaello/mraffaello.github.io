@@ -30,6 +30,7 @@ function HeroSection(props: HeroSectionProps) {
     const heroRef = useRef<HTMLDivElement>();
     const pointerRef = useRef<HTMLDivElement>();
     const firstCircleRef = useRef<HTMLDivElement>();
+    const hasMovedRef = useRef(false);
 
     // Memos
     const colors = useMemo(
@@ -40,6 +41,7 @@ function HeroSection(props: HeroSectionProps) {
     // Methods
     const onMouseEnter = () => {
         if (!pointerRef.current) return;
+        hasMovedRef.current = true;
         pointerRef.current.classList.remove('hidden');
     };
 
@@ -49,7 +51,13 @@ function HeroSection(props: HeroSectionProps) {
     };
 
     const onScroll = () => {
-        if (!firstCircleRef.current || !pointerRef.current || !heroRef.current) return;
+        if (
+            !firstCircleRef.current ||
+            !pointerRef.current ||
+            !heroRef.current ||
+            !hasMovedRef.current
+        )
+            return;
 
         const topString = firstCircleRef.current.style.top;
         const top = parseInt(topString.replace('px', '')) + window.scrollY;
